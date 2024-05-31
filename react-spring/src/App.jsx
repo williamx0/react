@@ -1,9 +1,9 @@
-import React from 'react';
+//import React from 'react';
 import './App.css';
 import Home from './Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import GroupList from './GroupList';
-import GroupEdit from './GroupEdit';
+import GroupList from './GroupList.js';
+import GroupEdit from './GroupEdit.js';
 
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path='/groups' exact={true} element={<GroupList/>}/>
+        <Route path='/groups/:id' element={<GroupEdit/>}/>
       </Routes>
     </Router>
   )
